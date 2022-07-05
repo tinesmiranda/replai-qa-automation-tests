@@ -1,23 +1,19 @@
 package selenium_tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
+public class ReplaiCustomerTests {
 
-public class ReplaiWebTest {
     WebDriver driver;
 
     @BeforeSuite
@@ -33,18 +29,6 @@ public class ReplaiWebTest {
     @AfterTest
     void teardown() {
         driver.quit();
-    }
-
-    @Test(description = "User story 1: Replai website general test")
-    void replaiGeneralTest() {
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get("https://www.replai.io/");
-
-        String title = driver.getTitle();
-
-        // Verify
-        assertThat(title, containsString("Replai: AI-Driven Video Analytics For Creatives"));
     }
 
     @Test(description = "User story 2: Replai logo assertion")
