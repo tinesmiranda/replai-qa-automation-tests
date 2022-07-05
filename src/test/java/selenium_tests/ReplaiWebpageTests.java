@@ -1,10 +1,12 @@
 package selenium_tests;
 
+import jdk.jfr.Timespan;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
@@ -13,6 +15,8 @@ import org.testng.annotations.BeforeTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -50,7 +54,7 @@ public class ReplaiWebpageTests {
     }
 
     @Test(description = "User story 1: Replai website menu test")
-    void replaiMenuTest() {
+    void replaiMenuTest() throws InterruptedException {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get(replaiHomepage);
@@ -61,7 +65,8 @@ public class ReplaiWebpageTests {
         action.moveToElement(solutionsMenu).perform();
 
 
-        WebElement creativeTeamsLink = solutionsMenu.findElement(By.xpath("//a[text()='Creative teams']"));
+        WebElement creativeTeamsLink = new WebDriverWait(driver, Duration.ofSeconds(3))
+                .until(driver -> solutionsMenu.findElement(By.xpath("//a[text()='Creative teams']")));
         creativeTeamsLink.click();
 
         String creativeTeamsUrl = driver.getCurrentUrl();
@@ -69,7 +74,8 @@ public class ReplaiWebpageTests {
 
         action.moveToElement(solutionsMenu).perform();
 
-        WebElement customerAcquisitonLink = solutionsMenu.findElement(By.xpath("//a[text()='Customer acquisiton & growth teams']"));
+        WebElement customerAcquisitonLink = new WebDriverWait(driver, Duration.ofSeconds(3))
+                .until(driver -> solutionsMenu.findElement(By.xpath("//a[text()='Customer acquisiton & growth teams']")));
         customerAcquisitonLink.click();
 
         String customerAcquisitionUrl = driver.getCurrentUrl();
@@ -79,7 +85,8 @@ public class ReplaiWebpageTests {
         WebElement resourcesMenu = driver.findElement(By.xpath("//li[@id='menu-item-353']"));
         action.moveToElement(resourcesMenu).perform();
 
-        WebElement insightsLink = resourcesMenu.findElement(By.xpath("//a[text()='Insights']"));
+        WebElement insightsLink = new WebDriverWait(driver, Duration.ofSeconds(3))
+                .until(driver -> resourcesMenu.findElement(By.xpath("//a[text()='Insights']")));
         insightsLink.click();
 
         String insightsUrl = driver.getCurrentUrl();
@@ -87,10 +94,40 @@ public class ReplaiWebpageTests {
 
         action.moveToElement(resourcesMenu).perform();
 
-        WebElement blogLink = resourcesMenu.findElement(By.xpath("//a[text()='Blog']"));
+        WebElement blogLink = new WebDriverWait(driver, Duration.ofSeconds(3))
+                .until(driver -> resourcesMenu.findElement(By.xpath("//a[text()='Blog']")));
         blogLink.click();
 
         String blogUrl = driver.getCurrentUrl();
         assertThat(blogUrl, equalTo("https://www.replai.io/blog"));
+
+        //Company
+        WebElement companyMenu = driver.findElement(By.xpath("//li[@id='menu-item-731']"));
+        action.moveToElement(companyMenu).perform();
+
+        WebElement aboutUsLink = new WebDriverWait(driver, Duration.ofSeconds(3))
+                .until(driver -> companyMenu.findElement(By.xpath("//a[text()='About us']")));
+        aboutUsLink.click();
+
+        String aboutUsUrl = driver.getCurrentUrl();
+        assertThat(aboutUsUrl, equalTo("https://www.replai.io/about-us"));
+
+        action.moveToElement(companyMenu).perform();
+
+        WebElement careersLink = new WebDriverWait(driver, Duration.ofSeconds(3))
+                .until(driver -> companyMenu.findElement(By.xpath("//a[text()='Careers']")));
+        careersLink.click();
+
+        String careersUrl = driver.getCurrentUrl();
+        assertThat(careersUrl, equalTo("https://www.replai.io/careers"));
+
+        action.moveToElement(companyMenu).perform();
+
+        WebElement contactLink = new WebDriverWait(driver, Duration.ofSeconds(3))
+                .until(driver -> companyMenu.findElement(By.xpath("//a[text()='Contact']")));
+        contactLink.click();
+
+        String contactUrl = driver.getCurrentUrl();
+        assertThat(contactUrl, equalTo("https://www.replai.io/contact"));
     }
 }
