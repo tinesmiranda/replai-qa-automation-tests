@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -56,75 +57,89 @@ public class ReplaiWebpageTests {
     @Test(description = "User story 1: Replai website menu test")
     void replaiMenuTest() throws InterruptedException {
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get(replaiHomepage);
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        CountDownLatch awaiter = new CountDownLatch(3);
 
         //Solutions for
         Actions action = new Actions(driver);
         WebElement solutionsMenu = driver.findElement(By.xpath("//li[@id='menu-item-33']"));
         action.moveToElement(solutionsMenu).perform();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@class='dropdown-submenu active']")));
 
-
-        WebElement creativeTeamsLink = new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(driver -> solutionsMenu.findElement(By.xpath("//a[text()='Creative teams']")));
+        WebElement creativeTeamsLink =solutionsMenu.findElement(By.xpath("//a[text()='Creative teams']"));
         creativeTeamsLink.click();
 
         String creativeTeamsUrl = driver.getCurrentUrl();
         assertThat(creativeTeamsUrl, equalTo("https://www.replai.io/creative-teams"));
 
-        action.moveToElement(solutionsMenu).perform();
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
 
-        WebElement customerAcquisitonLink = new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(driver -> solutionsMenu.findElement(By.xpath("//a[text()='Customer acquisiton & growth teams']")));
+        action.moveToElement(solutionsMenu).perform();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@class='dropdown-submenu active']")));
+
+        WebElement customerAcquisitonLink = solutionsMenu.findElement(By.xpath("//a[text()='Customer acquisiton & growth teams']"));
         customerAcquisitonLink.click();
 
         String customerAcquisitionUrl = driver.getCurrentUrl();
         assertThat(customerAcquisitionUrl, equalTo("https://www.replai.io/customer-acquisition-growth-teams"));
 
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
+
         //Resources
         WebElement resourcesMenu = driver.findElement(By.xpath("//li[@id='menu-item-353']"));
         action.moveToElement(resourcesMenu).perform();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@class='dropdown-submenu active']")));
 
-        WebElement insightsLink = new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(driver -> resourcesMenu.findElement(By.xpath("//a[text()='Insights']")));
+        WebElement insightsLink = resourcesMenu.findElement(By.xpath("//a[text()='Insights']"));
         insightsLink.click();
 
         String insightsUrl = driver.getCurrentUrl();
         assertThat(insightsUrl, equalTo("https://www.replai.io/insights"));
 
-        action.moveToElement(resourcesMenu).perform();
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
 
-        WebElement blogLink = new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(driver -> resourcesMenu.findElement(By.xpath("//a[text()='Blog']")));
+        action.moveToElement(resourcesMenu).perform();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@class='dropdown-submenu active']")));
+
+        WebElement blogLink = resourcesMenu.findElement(By.xpath("//a[text()='Blog']"));
         blogLink.click();
 
         String blogUrl = driver.getCurrentUrl();
         assertThat(blogUrl, equalTo("https://www.replai.io/blog"));
 
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
+
         //Company
         WebElement companyMenu = driver.findElement(By.xpath("//li[@id='menu-item-731']"));
         action.moveToElement(companyMenu).perform();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@class='dropdown-submenu active']")));
 
-        WebElement aboutUsLink = new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(driver -> companyMenu.findElement(By.xpath("//a[text()='About us']")));
+        WebElement aboutUsLink = companyMenu.findElement(By.xpath("//a[text()='About us']"));
         aboutUsLink.click();
 
         String aboutUsUrl = driver.getCurrentUrl();
         assertThat(aboutUsUrl, equalTo("https://www.replai.io/about-us"));
 
-        action.moveToElement(companyMenu).perform();
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
 
-        WebElement careersLink = new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(driver -> companyMenu.findElement(By.xpath("//a[text()='Careers']")));
+        action.moveToElement(companyMenu).perform();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@class='dropdown-submenu active']")));
+
+        WebElement careersLink = companyMenu.findElement(By.xpath("//a[text()='Careers']"));
         careersLink.click();
 
         String careersUrl = driver.getCurrentUrl();
         assertThat(careersUrl, equalTo("https://www.replai.io/careers"));
 
-        action.moveToElement(companyMenu).perform();
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
 
-        WebElement contactLink = new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(driver -> companyMenu.findElement(By.xpath("//a[text()='Contact']")));
+        action.moveToElement(companyMenu).perform();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@class='dropdown-submenu active']")));
+
+        WebElement contactLink = companyMenu.findElement(By.xpath("//a[text()='Contact']"));
         contactLink.click();
 
         String contactUrl = driver.getCurrentUrl();

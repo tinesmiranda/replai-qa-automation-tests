@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ReplaiSuite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="ReplaiTest1(failed)" verbose="0">
+    <classes>
+      <class name="selenium_tests.ReplaiWebpageTests">
+        <methods>
+          <include name="teardown"/>
+          <include name="setupTest"/>
+          <include name="setupClass"/>
+          <include name="replaiMenuTest"/>
+        </methods>
+      </class> <!-- selenium_tests.ReplaiWebpageTests -->
+    </classes>
+  </test> <!-- ReplaiTest1(failed) -->
+  <test thread-count="5" name="ReplaiTest2(failed)" verbose="0">
+    <classes>
+      <class name="selenium_tests.ReplaiCustomerTests">
+        <methods>
+          <include name="replaiLogoTest"/>
+          <include name="setupTest"/>
+          <include name="teardown"/>
+          <include name="setupClass"/>
+        </methods>
+      </class> <!-- selenium_tests.ReplaiCustomerTests -->
+    </classes>
+  </test> <!-- ReplaiTest2(failed) -->
+</suite> <!-- Failed suite [ReplaiSuite] -->

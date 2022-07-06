@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="ReplaiSuite" verbose="1" >
+    <test name="ReplaiTest1" >
+        <classes>
+            <class name="selenium_tests.ReplaiWebpageTests" />
+        </classes>
+    </test>
+
+    <test name="ReplaiTest2">
+        <classes>
+            <class name="selenium_tests.ReplaiCustomerTests"/>
+        </classes>
+    </test>
+</suite>
