@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -41,15 +42,7 @@ public class ReplaiCustomerTests {
 
         WebElement replaiLogo = growthTeamsSection.findElement(By.xpath("//*[text()='YOU’RE IN GOOD COMPANY']"));
 
-        /* boolean replaiLogoExists;
-
-        try {
-            WebElement replaiLogo = growthTeamsSection.findElement(By.xpath("//*[text()='YOU’RE IN GOOD COMPANY']"));
-            replaiLogoExists = true;
-        } catch (NoSuchElementException e) {
-            replaiLogoExists = false;
-        } */
-
+        Assert.assertEquals(true, replaiLogo.isDisplayed());
     }
 
     @Test(description = "User story 2: Replai customer list assertion")
