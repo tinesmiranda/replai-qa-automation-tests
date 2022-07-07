@@ -14,11 +14,13 @@ To extract project to computer, use Git Bash.
 
 $ cd '/c/Users/Teresa/replai-qa-automation-tests'
 
+
 3. Go to repository page - https://github.com/tinesmiranda/replai-qa-automation-tests
 5. Click on "Code", and then copy the link below "Clone" option
-6. Use git clone and chose "master" branch to download the project
+6. Use git clone and chose "master" branch to download the project:
 
 $ git clone -b master https://github.com/tinesmiranda/replai-qa-automation-tests.git
+
 
 Now you can open the project on your IDE. Open the folder "replai-qa-automation-tests".
 To install packages, use IDE command line:
