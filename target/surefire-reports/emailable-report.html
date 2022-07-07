@@ -9,43 +9,26 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">ReplaiSuite</th></tr>
-<tr><td><a href="#t0">ReplaiTest1</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">6 112</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">ReplaiTest2</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">8 985</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">15 097</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">ReplaiTest1</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">37 177</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">ReplaiTest2</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">9 067</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">5</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">46 244</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">ReplaiSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ReplaiTest1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">selenium_tests.ReplaiWebpageTests</td><td><a href="#m0">replaiMenuTest</a></td><td rowspan="1">1657125449547</td><td rowspan="1">420</td></tr><tr><th colspan="4">ReplaiTest1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">selenium_tests.ReplaiWebpageTests</td><td><a href="#m1">replaiGeneralTest</a></td><td rowspan="1">1657125446385</td><td rowspan="1">3160</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">ReplaiTest2 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">selenium_tests.ReplaiCustomerTests</td><td><a href="#m2">replaiLogoTest</a></td><td rowspan="1">1657125453569</td><td rowspan="1">5645</td></tr><tr><th colspan="4">ReplaiTest2 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">selenium_tests.ReplaiCustomerTests</td><td><a href="#m3">replaiCustomerListTest</a></td><td rowspan="1">1657125451476</td><td rowspan="1">2092</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">ReplaiSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ReplaiTest1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">selenium_tests.ReplaiWebpageTests</td><td><a href="#m0">replaiFaqSectionTest</a></td><td rowspan="1">1657201193401</td><td rowspan="1">6630</td></tr><tr class="passedeven"><td><a href="#m1">replaiGeneralTest</a></td><td rowspan="1">1657201200033</td><td rowspan="1">2488</td></tr><tr class="passedeven"><td><a href="#m2">replaiMenuTest</a></td><td rowspan="1">1657201202522</td><td rowspan="1">22437</td></tr><tr class="passedeven"><td><a href="#m3">replaiVideoSectionTest</a></td><td rowspan="1">1657201224960</td><td rowspan="1">3698</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">ReplaiTest2 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">selenium_tests.ReplaiCustomerTests</td><td><a href="#m4">replaiLogoTest</a></td><td rowspan="1">1657201232019</td><td rowspan="1">5742</td></tr><tr><th colspan="4">ReplaiTest2 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">selenium_tests.ReplaiCustomerTests</td><td><a href="#m5">replaiCustomerListTest</a></td><td rowspan="1">1657201229657</td><td rowspan="1">2362</td></tr></tbody>
 </table>
-<h2>ReplaiTest1</h2><h3 id="m0">selenium_tests.ReplaiWebpageTests#replaiMenuTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.66)
-Build info: version: &apos;4.2.1&apos;, revision: &apos;ac4d0fdd4a&apos;
-System info: host: &apos;LAPTOP-P5UBFOO4&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c7e4ec33b2f7e2d3962ccd32d3c642e1, get {url=https://www.replai.io/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Teresa\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64092}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64092/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c7e4ec33b2f7e2d3962ccd32d3c642e1
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:314)
-	at selenium_tests.ReplaiWebpageTests.replaiMenuTest(ReplaiWebpageTests.java:61)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ReplaiTest1</h2><h3 id="m0">selenium_tests.ReplaiWebpageTests#replaiFaqSectionTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">selenium_tests.ReplaiWebpageTests#replaiGeneralTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>ReplaiTest2</h2><h3 id="m2">selenium_tests.ReplaiCustomerTests#replaiLogoTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;YOUâ€™RE IN GOOD COMPANY&apos;]&quot;}
+<h3 id="m2">selenium_tests.ReplaiWebpageTests#replaiMenuTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">selenium_tests.ReplaiWebpageTests#replaiVideoSectionTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ReplaiTest2</h2><h3 id="m4">selenium_tests.ReplaiCustomerTests#replaiLogoTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;YOU’RE IN GOOD COMPANY&apos;]&quot;}
   (Session info: chrome=103.0.5060.66)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.2.1&apos;, revision: &apos;ac4d0fdd4a&apos;
 System info: host: &apos;LAPTOP-P5UBFOO4&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b62a030b7dc664dae48ffa8a23492ead, findChildElement {id=d2c5c3d8-00e3-48fe-a4db-f07d363889fe, using=xpath, value=//*[text()=&apos;YOUâ€™RE IN GOOD COMPANY&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Teresa\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64142}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64142/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b62a030b7dc664dae48ffa8a23492ead
+Command: [269e067bf1eec6f90872546d867957bc, findChildElement {id=8fc32e25-cc5d-4f2a-a603-546f9b27e85f, using=xpath, value=//*[text()=&apos;YOU’RE IN GOOD COMPANY&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Teresa\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:61464}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61464/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 269e067bf1eec6f90872546d867957bc
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -57,9 +40,9 @@ Session ID: b62a030b7dc664dae48ffa8a23492ead
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:369)
 	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:227)
-	at selenium_tests.ReplaiCustomerTests.replaiLogoTest(ReplaiCustomerTests.java:42)
+	at selenium_tests.ReplaiCustomerTests.replaiLogoTest(ReplaiCustomerTests.java:44)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">selenium_tests.ReplaiCustomerTests#replaiCustomerListTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">selenium_tests.ReplaiCustomerTests#replaiCustomerListTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

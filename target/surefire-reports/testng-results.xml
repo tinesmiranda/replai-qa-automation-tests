@@ -1,138 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-06T17:37:24 WEST" name="ReplaiSuite" finished-at="2022-07-06T17:37:39 WEST" duration-ms="15112">
+  <suite started-at="2022-07-07T14:39:51 WEST" name="ReplaiSuite" finished-at="2022-07-07T14:40:37 WEST" duration-ms="46260">
     <groups>
     </groups>
-    <test started-at="2022-07-06T17:37:24 WEST" name="ReplaiTest1" finished-at="2022-07-06T17:37:30 WEST" duration-ms="6112">
+    <test started-at="2022-07-07T14:39:51 WEST" name="ReplaiTest1" finished-at="2022-07-07T14:40:28 WEST" duration-ms="37177">
       <class name="selenium_tests.ReplaiWebpageTests">
-        <test-method is-config="true" signature="setupTest()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-06T17:37:24 WEST" name="setupTest" finished-at="2022-07-06T17:37:26 WEST" duration-ms="2083" status="PASS">
+        <test-method is-config="true" signature="setupTest()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-07T14:39:51 WEST" name="setupTest" finished-at="2022-07-07T14:39:53 WEST" duration-ms="1655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="replaiGeneralTest()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-06T17:37:26 WEST" name="replaiGeneralTest" description="User story 1: Replai website general test" finished-at="2022-07-06T17:37:29 WEST" duration-ms="3160" status="PASS">
+        <test-method signature="replaiFaqSectionTest()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-07T14:39:53 WEST" name="replaiFaqSectionTest" description="User story 1: Replai FAQ section test" finished-at="2022-07-07T14:40:00 WEST" duration-ms="6630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- replaiFaqSectionTest -->
+        <test-method signature="replaiGeneralTest()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-07T14:40:00 WEST" name="replaiGeneralTest" description="User story 1: Replai website general test" finished-at="2022-07-07T14:40:02 WEST" duration-ms="2488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- replaiGeneralTest -->
-        <test-method signature="replaiMenuTest()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-06T17:37:29 WEST" name="replaiMenuTest" description="User story 1: Replai website menu test" finished-at="2022-07-06T17:37:29 WEST" duration-ms="420" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: cannot determine loading status
-from unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.66)
-Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
-System info: host: 'LAPTOP-P5UBFOO4', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c7e4ec33b2f7e2d3962ccd32d3c642e1, get {url=https://www.replai.io/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Teresa\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64092}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64092/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c7e4ec33b2f7e2d3962ccd32d3c642e1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.66)
-Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
-System info: host: 'LAPTOP-P5UBFOO4', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c7e4ec33b2f7e2d3962ccd32d3c642e1, get {url=https://www.replai.io/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Teresa\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64092}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64092/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c7e4ec33b2f7e2d3962ccd32d3c642e1
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:314)
-at selenium_tests.ReplaiWebpageTests.replaiMenuTest(ReplaiWebpageTests.java:61)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method signature="replaiMenuTest()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-07T14:40:02 WEST" name="replaiMenuTest" description="User story 1: Replai website menu test" finished-at="2022-07-07T14:40:24 WEST" duration-ms="22437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- replaiMenuTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-06T17:37:29 WEST" name="teardown" finished-at="2022-07-06T17:37:30 WEST" duration-ms="414" status="PASS">
+        <test-method signature="replaiVideoSectionTest()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-07T14:40:24 WEST" name="replaiVideoSectionTest" description="User story 1: Replai video section test" finished-at="2022-07-07T14:40:28 WEST" duration-ms="3698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- replaiVideoSectionTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-07T14:40:28 WEST" name="teardown" finished-at="2022-07-07T14:40:28 WEST" duration-ms="244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- selenium_tests.ReplaiWebpageTests -->
     </test> <!-- ReplaiTest1 -->
-    <test started-at="2022-07-06T17:37:30 WEST" name="ReplaiTest2" finished-at="2022-07-06T17:37:39 WEST" duration-ms="8985">
+    <test started-at="2022-07-07T14:40:28 WEST" name="ReplaiTest2" finished-at="2022-07-07T14:40:37 WEST" duration-ms="9067">
       <class name="selenium_tests.ReplaiCustomerTests">
-        <test-method is-config="true" signature="setupClass()[pri:0, instance:selenium_tests.ReplaiCustomerTests@3023df74]" started-at="2022-07-06T17:37:24 WEST" name="setupClass" finished-at="2022-07-06T17:37:24 WEST" duration-ms="31" status="PASS">
+        <test-method is-config="true" signature="setupClass()[pri:0, instance:selenium_tests.ReplaiCustomerTests@3023df74]" started-at="2022-07-07T14:39:51 WEST" name="setupClass" finished-at="2022-07-07T14:39:51 WEST" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupClass -->
-        <test-method is-config="true" signature="setupTest()[pri:0, instance:selenium_tests.ReplaiCustomerTests@3023df74]" started-at="2022-07-06T17:37:30 WEST" name="setupTest" finished-at="2022-07-06T17:37:31 WEST" duration-ms="1061" status="PASS">
+        <test-method is-config="true" signature="setupTest()[pri:0, instance:selenium_tests.ReplaiCustomerTests@3023df74]" started-at="2022-07-07T14:40:28 WEST" name="setupTest" finished-at="2022-07-07T14:40:29 WEST" duration-ms="733" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="replaiCustomerListTest()[pri:0, instance:selenium_tests.ReplaiCustomerTests@3023df74]" started-at="2022-07-06T17:37:31 WEST" name="replaiCustomerListTest" description="User story 2: Replai customer list assertion" finished-at="2022-07-06T17:37:33 WEST" duration-ms="2092" status="PASS">
+        <test-method signature="replaiCustomerListTest()[pri:0, instance:selenium_tests.ReplaiCustomerTests@3023df74]" started-at="2022-07-07T14:40:29 WEST" name="replaiCustomerListTest" description="User story 2: Replai customer list assertion" finished-at="2022-07-07T14:40:32 WEST" duration-ms="2362" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- replaiCustomerListTest -->
-        <test-method signature="replaiLogoTest()[pri:0, instance:selenium_tests.ReplaiCustomerTests@3023df74]" started-at="2022-07-06T17:37:33 WEST" name="replaiLogoTest" description="User story 2: Replai logo assertion" finished-at="2022-07-06T17:37:39 WEST" duration-ms="5645" status="FAIL">
+        <test-method signature="replaiLogoTest()[pri:0, instance:selenium_tests.ReplaiCustomerTests@3023df74]" started-at="2022-07-07T14:40:32 WEST" name="replaiLogoTest" description="User story 2: Replai logo assertion" finished-at="2022-07-07T14:40:37 WEST" duration-ms="5742" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='YOUâ€™RE IN GOOD COMPANY']"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='YOU’RE IN GOOD COMPANY']"}
   (Session info: chrome=103.0.5060.66)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
 System info: host: 'LAPTOP-P5UBFOO4', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b62a030b7dc664dae48ffa8a23492ead, findChildElement {id=d2c5c3d8-00e3-48fe-a4db-f07d363889fe, using=xpath, value=//*[text()='YOUâ€™RE IN GOOD COMPANY']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Teresa\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64142}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64142/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b62a030b7dc664dae48ffa8a23492ead]]>
+Command: [269e067bf1eec6f90872546d867957bc, findChildElement {id=8fc32e25-cc5d-4f2a-a603-546f9b27e85f, using=xpath, value=//*[text()='YOU’RE IN GOOD COMPANY']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Teresa\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:61464}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61464/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 269e067bf1eec6f90872546d867957bc]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='YOUâ€™RE IN GOOD COMPANY']"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='YOU’RE IN GOOD COMPANY']"}
   (Session info: chrome=103.0.5060.66)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
 System info: host: 'LAPTOP-P5UBFOO4', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b62a030b7dc664dae48ffa8a23492ead, findChildElement {id=d2c5c3d8-00e3-48fe-a4db-f07d363889fe, using=xpath, value=//*[text()='YOUâ€™RE IN GOOD COMPANY']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Teresa\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64142}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64142/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b62a030b7dc664dae48ffa8a23492ead
+Command: [269e067bf1eec6f90872546d867957bc, findChildElement {id=8fc32e25-cc5d-4f2a-a603-546f9b27e85f, using=xpath, value=//*[text()='YOU’RE IN GOOD COMPANY']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\Teresa\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:61464}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61464/devtoo..., se:cdpVersion: 103.0.5060.66, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 269e067bf1eec6f90872546d867957bc
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -149,7 +86,7 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:369)
 at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:227)
-at selenium_tests.ReplaiCustomerTests.replaiLogoTest(ReplaiCustomerTests.java:42)
+at selenium_tests.ReplaiCustomerTests.replaiLogoTest(ReplaiCustomerTests.java:44)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -188,13 +125,13 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- replaiLogoTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:selenium_tests.ReplaiCustomerTests@3023df74]" started-at="2022-07-06T17:37:39 WEST" name="teardown" finished-at="2022-07-06T17:37:39 WEST" duration-ms="184" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:selenium_tests.ReplaiCustomerTests@3023df74]" started-at="2022-07-07T14:40:37 WEST" name="teardown" finished-at="2022-07-07T14:40:37 WEST" duration-ms="213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- selenium_tests.ReplaiCustomerTests -->
       <class name="selenium_tests.ReplaiWebpageTests">
-        <test-method is-config="true" signature="setupClass()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-06T17:37:23 WEST" name="setupClass" finished-at="2022-07-06T17:37:24 WEST" duration-ms="336" status="PASS">
+        <test-method is-config="true" signature="setupClass()[pri:0, instance:selenium_tests.ReplaiWebpageTests@1189dd52]" started-at="2022-07-07T14:39:51 WEST" name="setupClass" finished-at="2022-07-07T14:39:51 WEST" duration-ms="338" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupClass -->
