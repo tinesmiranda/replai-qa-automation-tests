@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class ReplaiCustomerTests {
@@ -35,7 +36,7 @@ public class ReplaiCustomerTests {
     @Test(description = "User story 2: Replai logo assertion")
     void replaiLogoTest() {
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://www.replai.io/customer-acquisition-growth-teams");
 
         WebElement growthTeamsSection = driver.findElement(By.xpath("//section[@class='clients   mt-8 mb-8']"));
@@ -48,7 +49,7 @@ public class ReplaiCustomerTests {
     @Test(description = "User story 2: Replai customer list assertion")
     void replaiCustomerListTest() {
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://www.replai.io/customer-acquisition-growth-teams");
 
         WebElement growthTeamsSection = driver.findElement(By.xpath("//section[@class='clients   mt-8 mb-8']"));
