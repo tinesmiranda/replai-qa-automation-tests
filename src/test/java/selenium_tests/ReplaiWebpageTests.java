@@ -78,7 +78,7 @@ public class ReplaiWebpageTests {
         action.moveToElement(solutionsMenu).perform();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@class='dropdown-submenu active']")));
 
-        WebElement customerAcquisitonLink = solutionsMenu.findElement(By.xpath("//a[text()='Customer acquisiton & growth teams']"));
+        WebElement customerAcquisitonLink = solutionsMenu.findElement(By.xpath("//a[text()='Customer acquisition & growth teams']"));
         customerAcquisitonLink.click();
 
         String customerAcquisitionUrl = driver.getCurrentUrl();
