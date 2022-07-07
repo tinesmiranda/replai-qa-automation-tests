@@ -166,4 +166,49 @@ public class ReplaiWebpageTests {
 
         Assert.assertEquals(true, videoElement.isDisplayed());
     }
+
+    @Test(description = "User story 1: Replai FAQ section test")
+    void replaiFaqSectionTest() throws InterruptedException {
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get(replaiHomepage);
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        CountDownLatch awaiter = new CountDownLatch(3);
+
+        //Question 1
+        WebElement faqSection = driver.findElement(By.xpath("//div[@class='schema-faq wp-block-yoast-faq-block']"));
+
+        WebElement faqQuestion1Title = faqSection.findElement(By.xpath("//div[@class='schema-faq wp-block-yoast-faq-block']//strong[@class='schema-faq-question']"));
+        faqQuestion1Title.click();
+
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
+
+        WebElement faqQuestion1Answer = faqSection.findElement(By.xpath("//div[@class='schema-faq wp-block-yoast-faq-block']//p[@class='schema-faq-answer']"));
+        Assert.assertEquals(true, faqQuestion1Answer.isDisplayed());
+
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
+
+        //Question 2
+        WebElement faqQuestion2Title = faqSection.findElement(By.xpath("//div[@id='faq-question-1655107919219']//strong[@class='schema-faq-question']"));
+        faqQuestion2Title.click();
+
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
+
+        WebElement faqQuestion2Answer = faqSection.findElement(By.xpath("//div[@id='faq-question-1655107919219']//p[@class='schema-faq-answer']"));
+        Assert.assertEquals(true, faqQuestion2Answer.isDisplayed());
+        Assert.assertEquals(false, faqQuestion1Answer.isDisplayed());
+
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
+
+        //Question 3
+        WebElement faqQuestion3Title = faqSection.findElement(By.xpath("//div[@id='faq-question-1655107950525']//strong[@class='schema-faq-question']"));
+        faqQuestion3Title.click();
+
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
+
+        WebElement faqQuestion3Answer = faqSection.findElement(By.xpath("//div[@id='faq-question-1655107950525']//p[@class='schema-faq-answer']"));
+        Assert.assertEquals(true, faqQuestion3Answer.isDisplayed());
+        Assert.assertEquals(false, faqQuestion2Answer.isDisplayed());
+    }
 }
