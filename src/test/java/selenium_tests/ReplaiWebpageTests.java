@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -19,8 +20,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.*;
 
 public class ReplaiWebpageTests {
     WebDriver driver;
@@ -142,5 +142,28 @@ public class ReplaiWebpageTests {
 
         String contactUrl = driver.getCurrentUrl();
         assertThat(contactUrl, equalTo("https://www.replai.io/contact"));
+    }
+
+    @Test(description = "User story 1: Replai video section test")
+    void replaiVideoSectionTest() throws InterruptedException {
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get(replaiHomepage);
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        CountDownLatch awaiter = new CountDownLatch(3);
+
+        WebElement watchVideoButton =driver.findElement(By.xpath("//a[@href='#video-section']"));
+        watchVideoButton.click();
+
+        awaiter.await(3000, TimeUnit.MILLISECONDS);
+
+        String videoSectionUrl = driver.getCurrentUrl();
+        assertThat(videoSectionUrl, equalTo("https://www.replai.io/#video-section"));
+
+        WebElement videoSection = driver.findElement(By.xpath("//section[@id='video-section']"));
+        WebElement videoElement = videoSection.findElement(By.xpath("//iframe[@title='Meet Replai']"));
+
+        Assert.assertEquals(true, videoElement.isDisplayed());
     }
 }
