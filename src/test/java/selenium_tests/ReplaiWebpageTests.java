@@ -145,69 +145,71 @@ public class ReplaiWebpageTests {
     }
 
     @Test(description = "User story 1: Replai video section test")
-    void replaiVideoSectionTest() throws InterruptedException {
+    void replaiVideoSectionTest() {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get(replaiHomepage);
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-        CountDownLatch awaiter = new CountDownLatch(3);
 
         WebElement watchVideoButton =driver.findElement(By.xpath("//a[@href='#video-section']"));
         watchVideoButton.click();
 
-        awaiter.await(3000, TimeUnit.MILLISECONDS);
+        WebElement videoSection = driver.findElement(By.xpath("//section[@id='video-section']"));
+
+        wait.until(ExpectedConditions.visibilityOf(videoSection));
 
         String videoSectionUrl = driver.getCurrentUrl();
         assertThat(videoSectionUrl, equalTo("https://www.replai.io/#video-section"));
 
-        WebElement videoSection = driver.findElement(By.xpath("//section[@id='video-section']"));
         WebElement videoElement = videoSection.findElement(By.xpath("//iframe[@title='Meet Replai']"));
 
         Assert.assertEquals(true, videoElement.isDisplayed());
     }
 
     @Test(description = "User story 1: Replai FAQ section test")
-    void replaiFaqSectionTest() throws InterruptedException {
+    void replaiFaqSectionTest() {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get(replaiHomepage);
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-        CountDownLatch awaiter = new CountDownLatch(3);
 
         //Question 1
         WebElement faqSection = driver.findElement(By.xpath("//div[@class='schema-faq wp-block-yoast-faq-block']"));
 
         WebElement faqQuestion1Title = faqSection.findElement(By.xpath("//div[@class='schema-faq wp-block-yoast-faq-block']//strong[@class='schema-faq-question']"));
+        wait.until(ExpectedConditions.elementToBeClickable(faqQuestion1Title));
         faqQuestion1Title.click();
 
-        awaiter.await(3000, TimeUnit.MILLISECONDS);
-
         WebElement faqQuestion1Answer = faqSection.findElement(By.xpath("//div[@class='schema-faq wp-block-yoast-faq-block']//p[@class='schema-faq-answer']"));
+        wait.until(ExpectedConditions.visibilityOf(faqQuestion1Answer));
+
         Assert.assertEquals(true, faqQuestion1Answer.isDisplayed());
 
-        awaiter.await(3000, TimeUnit.MILLISECONDS);
 
         //Question 2
         WebElement faqQuestion2Title = faqSection.findElement(By.xpath("//div[@id='faq-question-1655107919219']//strong[@class='schema-faq-question']"));
+        wait.until(ExpectedConditions.elementToBeClickable(faqQuestion2Title));
         faqQuestion2Title.click();
 
-        awaiter.await(3000, TimeUnit.MILLISECONDS);
-
         WebElement faqQuestion2Answer = faqSection.findElement(By.xpath("//div[@id='faq-question-1655107919219']//p[@class='schema-faq-answer']"));
+        wait.until(ExpectedConditions.visibilityOf(faqQuestion2Answer));
+        wait.until(ExpectedConditions.invisibilityOf(faqQuestion1Answer));
+
         Assert.assertEquals(true, faqQuestion2Answer.isDisplayed());
         Assert.assertEquals(false, faqQuestion1Answer.isDisplayed());
 
-        awaiter.await(3000, TimeUnit.MILLISECONDS);
 
         //Question 3
         WebElement faqQuestion3Title = faqSection.findElement(By.xpath("//div[@id='faq-question-1655107950525']//strong[@class='schema-faq-question']"));
+        wait.until(ExpectedConditions.elementToBeClickable(faqQuestion3Title));
         faqQuestion3Title.click();
 
-        awaiter.await(3000, TimeUnit.MILLISECONDS);
-
         WebElement faqQuestion3Answer = faqSection.findElement(By.xpath("//div[@id='faq-question-1655107950525']//p[@class='schema-faq-answer']"));
+        wait.until(ExpectedConditions.visibilityOf(faqQuestion3Answer));
+        wait.until(ExpectedConditions.invisibilityOf(faqQuestion2Answer));
+
         Assert.assertEquals(true, faqQuestion3Answer.isDisplayed());
         Assert.assertEquals(false, faqQuestion2Answer.isDisplayed());
     }
